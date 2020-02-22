@@ -1,0 +1,25 @@
+{
+    "name": "node-red-contrib-opencv-motion-detect-node",
+    "version": "0.0.2",
+    "description": "To draw rectangle(s) on image",
+    "author": "Caprasilana",
+    "license": "Apache-2.0",
+    "keywords": [
+        "opencv",
+        "image",
+        "motion detect"
+    ],
+    "node-red": {
+        "nodes": {
+            "canvas-rectangle-node": "node/canvas-rectangle-node.js"
+        }
+    },
+    "contributors": [],
+    "dependencies": {
+        "opencv": "*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/caprasilana/opencv-motion-detect-node.git"
+    }
+}
