@@ -1,7 +1,7 @@
 {
     "name": "node-red-contrib-opencv-motion-detect-node",
-    "version": "0.0.2",
-    "description": "To draw rectangle(s) on image",
+    "version": "0.0.1",
+    "description": "Node-Red node for motion detection",
     "author": "Caprasilana",
     "license": "Apache-2.0",
     "keywords": [

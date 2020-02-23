@@ -1,34 +1,13 @@
 <script type="text/javascript">
     RED.nodes.registerType('opencv-motion-detect-node', {
-        category: 'canvas',
+        category: 'opencv',
         color: '#5499C7',
         defaults: {
             name: { value: "" },
-            imagePath: {
-                value: "",
-                required: true
-            },
-            width: {
-                value: 0,
-                validate: function (v) { return !v || v >= 0 }
-            },
-            height: {
-                value: 0,
-                validate: function (v) { return !v || v >= 0 }
-            },
-            offset_x: {
-                value: 0,
-                validate: function (v) { return !v || v >= 0 }
-            },
-            offset_y: {
-                value: 0,
-                validate: function (v) { return !v || v >= 0 }
-            },
-            title: { value: "" },
         },
         inputs: 1,
         outputs: 1,
-        paletteLabel: "canvas rectangle",
+        paletteLabel: "openCv Streaming",
         icon: "font-awesome/fa-picture-o",
         label: function () {
             return this.name || "opencv-motion-detect-node";
@@ -41,67 +20,33 @@
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
-    <div class="form-row">
+    <!-- <div class="form-row">
         <label for="node-input-imagePath"><i class="fa fa-file-image-o"></i>Image Path</label>
         <input type="text" id="node-input-imagePath" placeholder="/home/pi/image.png">
-    </div>
-    <div class="form-row">
-        <label for="node-input-title"><i class="fa fa-file-image-o"></i>Title</label>
-        <input type="text" id="node-input-title" placeholder="rectancle title">
-    </div>
-    <div class="form-row">
-        <label for="node-input-offset_x"><i class="fa fa-plus-square-o"></i>Offset X</label>
-        <input type="number" id="node-input-offset_x" >
-    </div>
-    <div class="form-row">
-        <label for="node-input-offset_y"><i class="fa fa-plus-square-o"></i>Offset Y</label>
-        <input type="number" id="node-input-offset_y" >
-    </div>
-    <div class="form-row">
-        <label for="node-input-width"><i class="fa fa-plus-square-o"></i>Width</label>
-        <input type="number" id="node-input-width" >
-    </div>
-    <div class="form-row">
-        <label for="node-input-height"><i class="fa fa-plus-square-o"></i>Height</label>
-        <input type="number" id="node-input-height" >
-    </div>
+    </div> -->
+    
 </script>
 
 <script type="text/html" data-help-name="canvas-rectangle-node">
-    <p>A simple node that add rectangle(s) over the input image</p>
+    <p>A opencv node</p>
     <h3>Inputs</h3>
     <dl class="message-properties">
-    <dt>Edit Dialog
-        <span class="property-type">string</span>
-    </dt>
-    <dd> In the Edit dialog you can fill all input. </dd>
     <dt>payload
-        <span class="property-type">Array of Object</span>
+        <span class="property-type">string | buffer</span>
     </dt>
-    <dd> the payload of the message to publish. </dd>
+    <dd>  </dd>
 
-    
     <h3>Output</h3>
        <dl class="message-properties">
        <dt>payload
            <span class="property-type">string | buffer</span>
        </dt>
-       <dd> Image result in base64 </dd>
+       <dd>  </dd>
        <h3>Details</h3>
-       <p><code>msg.payload</code> is used if you have a tfjs object detection output before.
-        The input in this case will be a Array of JSON like 
-        {
-            bbox: [offset x, offsety, width, height],
-            class: text,
-            score: number
-        }
-        
-        otherwhise you can use the edit dialog to fill all data.
-        
-        Image Path is mandatory.</p>
+       <p></p>
    
    <h3>References</h3>
        <ul>
-           <li><a href="https://github.com/caprasilana/canvas-rectangle-node">GitHub </a> - the nodes github repository for canvas-rectangle-node</li>
+           <li><a href="https://github.com/caprasilana/opencv-motion-detect-node">GitHub </a> - the nodes github repository for opencv-motion-detect-node</li>
        </ul>
 </script>
