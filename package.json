@@ -11,7 +11,7 @@
     ],
     "node-red": {
         "nodes": {
-            "canvas-rectangle-node": "node/canvas-rectangle-node.js"
+            "opencv-motion-detect-node": "node/opencv-motion-detect-node.js"
         }
     },
     "contributors": [],
